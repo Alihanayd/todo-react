@@ -9,7 +9,7 @@ const Input = () => {
     <div className="w-full mt-4 flex  items-center flex-col">
       <input
         type="text"
-        className="rounded w-3/4 outline-none border-none p-2 text-gray-600"
+        className="rounded w-3/4 outline-none border-none p-2 text-gray-600 mb-4"
         autoFocus
         placeholder="Create new todo"
         value={text}
@@ -29,7 +29,21 @@ const Input = () => {
           setText(e.target.value);
         }}
       />
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-4 rounded"
+        onClick={() => {
+          if (text !== "") {
+            dispatch(
+              addTodo({
+                id: new Date().getTime(),
+                title: text,
+                completed: false,
+              })
+            );
+            setText("");
+          }
+        }}
+      >
         Add Task
       </button>
     </div>
