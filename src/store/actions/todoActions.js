@@ -2,7 +2,6 @@ import {
   ADD_TODO,
   DELETE_TODO,
   COMPLETE_TODO,
-  UPDATE_TODO,
   SET_FILTER,
   CLEAR_COMPLETED,
 } from "../actionTypes/todoActionTypes";
@@ -25,13 +24,6 @@ export const completeTodo = (id, completed) => {
   return {
     type: COMPLETE_TODO,
     payload: { id, completed },
-  };
-};
-
-export const updateTodo = (todo) => {
-  return {
-    type: UPDATE_TODO,
-    payload: todo,
   };
 };
 
