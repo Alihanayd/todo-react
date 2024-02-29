@@ -10,10 +10,10 @@ const ListContent = () => {
   return (
     <div className="w-3/4">
       {todos.length > 0 && (
-        <div className="bg-gray-700 p-4 rounded w-full max-h-[500px]">
+        <div className="bg-gray-700 p-4 rounded w-full h-[500px]">
           <div className="flex justify-center space-x-2 mb-4">
             <button
-              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+              className="bg-blue-500 hover:bg-blue-600 text-white text-xs lg:text-base lg:font-bold py-1 px-2 md:py-2 md:px-4 rounded"
               onClick={() => {
                 dispatch(setFilter("all"));
               }}
@@ -21,7 +21,7 @@ const ListContent = () => {
               Filter All
             </button>
             <button
-              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+              className="bg-green-500 hover:bg-green-600 text-white text-xs lg:text-base lg:font-bold py-1 px-2 md:py-2 md:px-4 rounded"
               onClick={() => {
                 dispatch(setFilter("completed"));
               }}
@@ -29,7 +29,7 @@ const ListContent = () => {
               Filter Completed
             </button>
             <button
-              className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+              className="bg-orange-500 hover:bg-orange-600 text-white text-xs lg:text-base lg:font-bold py-1 px-2 md:py-2 md:px-4 rounded"
               onClick={() => {
                 dispatch(setFilter("incompleted"));
               }}
@@ -37,7 +37,7 @@ const ListContent = () => {
               Filter Incomplete
             </button>
             <button
-              className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+              className="bg-red-500 hover:bg-red-600 text-white text-xs lg:text-base lg:font-bold py-1 px-2 md:py-2 md:px-4 rounded"
               onClick={() => {
                 dispatch(clearCompleted());
               }}

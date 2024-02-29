@@ -18,7 +18,7 @@ const ListItem = (props) => {
       />
       <span className="text-white font-semibold">{props.todo.title}</span>
       <button
-        className="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600 my-2"
+        className="px-2 py-1 bg-red-500 text-white text-xs lg:text-base lg:font-bold rounded hover:bg-red-600 my-2"
         onClick={() => {
           dispatch(deleteTodo(props.todo.id));
         }}
